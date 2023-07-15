@@ -1,0 +1,25 @@
+{
+  "description": "My iExec resource description, must be at least 150 chars long in order to pass the validation checks. Describe your application, dataset or workerpool to your users",
+  "license": "MIT",
+  "author": "?",
+  "social": {
+    "website": "?",
+    "github": "?"
+  },
+  "logo": "logo.png",
+  "buyConf": {},
+  "app": {
+    "owner": "0x8790ed88752255da1a08142d5ba31f0fc0b97fd4",
+    "name": "iosl-pupd",
+    "type": "DOCKER",
+    "multiaddr": "docker.io/samchamani/iosl-pupd:1.0.0-debug",
+    "checksum": "0x561de587163484e34068980e9ca6141503c0dde6ed15ca2fdbef22334baebe9d",
+    "mrenclave": {
+      "framework": "SCONE",
+      "version": "v5",
+      "entrypoint": "node /app/app.js",
+      "heapSize": 1073741824,
+      "fingerprint": "3519513f277a79d77fec08c8f0d3acb9c65d248c3b518b2220e218835283c84e"
+    }
+  }
+}

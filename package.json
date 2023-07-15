@@ -1,0 +1,12 @@
+{
+  "name": "tee-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "scone": "docker build . --tag samchamani/iosl-pupd:1.0.0 && docker push samchamani/iosl-pupd:1.0.0 && sh sconify.sh && docker push samchamani/iosl-pupd:1.0.0-debug",
+    "deploy": "iexec app deploy --chain bellecour"
+  },
+  "author": "",
+  "license": "ISC"
+}
