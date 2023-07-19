@@ -1,34 +1,10 @@
-# iExec Command
+# Scone app
 
-## Deploy
+This is the TEE app that will get the dataset from the environment and check if the requested passengers are included in the dataset.
 
-`iexec app deploy --chain bellecour`
+## How to deploy this app
 
-## Run
-
-TODO: wechseln weil jetzt nicht mehr mit gramine
-`iexec app run --tag tee,gramine --workerpool debug-v8-bellecour.main.pools.iexec.eth --watch --chain bellecour`
-
-## Publish
-
-`iexec app publish --chain bellecour`
-
-This can be used to setup restrictions etc. To see options run:
-
-`iexec app publish --help`
-
-## Show a deal
-
-`iexec deal show <dealid>`
-
-`<dealid>` looks somewhat like this `0x0b32b28446e729059443add88294fb74fbf5d8446f8574964a79b8e2eedd0419`
-
-## Download result
-
-- `iexec task show <taskid> --download task-result --chain bellecour`
-- `unzip task-result.zip -d task-result`
-- `cat task-result/result.txt`
-
-## Check orderbook
-
-`iexec orderbook app <your app address> --chain bellecour`
+1. In `iexec.json`, `sconify.sh` and `package.json` repleace `samchamani` with your docker user name. Make sure you docker daemon is running.
+2. Run `npm run scone`.
+3. Get the checksum of `iosl-pupd:1.0.0-debug` and the `fingerprint` from the output of step 2, and insert them in the `iexec.json` as values for `checksum` and `fingerprint`
+4. Run `npm run deploy`.
